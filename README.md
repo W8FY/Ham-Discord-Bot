@@ -18,16 +18,13 @@ Go to OAuth2 -> URL Generator tab. Enable the `bot` scope and then add all permi
 
 Enable developer mode in your Discord client and [get the channel ID](https://turbofuture.com/internet/Discord-Channel-ID) for the dedicated channel to display the uptime dashboard.
 
-Download and build the bot.
+Open config.yml and add Discord key for the bot and the channel IDs.
 
 ```bash
-git clone git@https://github.com/W8FY/Ham-Discord-Bot.git`
-cd Ham-Discord-Bot
-cp example-config.yml config.yml
+# Create a config.yml - base this off of the example-config.yml in the repo
 vi config.yml
+docker run -v ./config.yml:/code/config.yml -d thadigus/ham-discord-bot:latest
 ```
-
-Open config.yml and add Discord key for the bot and the channel IDs.
 
 ### Running with Python (Debugging)
 
@@ -44,7 +41,7 @@ The intended deployment of this bot is as a Docker container due to its non-pers
 
 ```bash
 docker build -t discord-uptime-bot .
-docker run -d -v ./config.yml:/code/config.yml --name ham-discord-bot ham-discord-bot:latest
+docker run -d -v ./config.yml:/code/config.yml --name ham-discord-bot thadigus/ham-discord-bot:latest
 docker ps
 ```
 
