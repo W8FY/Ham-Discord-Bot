@@ -8,7 +8,7 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - name: Checkout code
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
       # - name: Log in to Docker Hub
       #   uses: docker/login-action@v2
       #   with:
@@ -24,6 +24,6 @@ jobs:
     if: github.event_name == 'push' && github.ref != 'refs/heads/main'
     steps:
       - name: Checkout code
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
       - name: Build Docker image
         run: docker build -t ham-discord-bot:latest 
