@@ -2,7 +2,7 @@
 
 A containerized service to manage an Amatuer Radio Discord Server
 
-![Pipeline Status Badge]()
+[![.github/workflows/container-build.yml](https://github.com/W8FY/Ham-Discord-Bot/actions/workflows/container-build.yml/badge.svg)](https://github.com/W8FY/Ham-Discord-Bot/actions/workflows/container-build.yml)
 
 ## Installation
 
