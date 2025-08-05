@@ -1,6 +1,8 @@
 name: Automated Container Build and Push to DockerHub
 on:
   push:
+  workflow_dispatch: # Enabling manual triggering of this workflow for external package updates
+
 jobs:
 
   Build-Container-and-Push:
